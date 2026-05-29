@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Temps Primitifs • Révision</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🎮 Temps Primitifs</h1>
+      <div class="header-controls">
+        <span id="versionTitle">100 verbes</span>
+        <button id="themeToggle">🌙</button>
+      </div>
+    </header>
+
+    <input type="text" id="search" placeholder="🔍 Rechercher un verbe..." onkeyup="searchVerbs()">
+
+    <nav>
+      <button onclick="showSection('list')">📋 Liste</button>
+      <button onclick="showSection('flashcards')">🃏 Flashcards</button>
+      <button onclick="showSection('quiz')">❓ Quiz</button>
+      <button onclick="showSection('fill')">📝 À trous</button>
+      <button onclick="showSection('matching')">🔗 Matching</button>
+      <button onclick="showSection('audioquiz')">🎧 Audio</button>
+      <button onclick="showSection('stats')">📊 Stats</button>
+    </nav>
+
+    <!-- LISTE -->
+    <div id="list" class="section active">
+      <h2>Liste des verbes</h2>
+      <div id="listContent"></div>
+    </div>
+
+    <!-- FLASHCARDS -->
+    <div id="flashcards" class="section">
+      <h2>Flashcards</h2>
+      <div id="flashcard" class="card"></div>
+      <button onclick="showFlashcard()">Nouvelle carte</button>
+    </div>
+
+    <!-- QUIZ -->
+    <div id="quiz" class="section">
+      <h2>Quiz Multiple Choice</h2>
+      <div id="quizContent"></div>
+      <button onclick="startQuiz()">Nouveau quiz</button>
+    </div>
+
+    <!-- À TROUS -->
+    <div id="fill" class="section">
+      <h2>Exercices à trous (réalistes)</h2>
+      <div id="fillContent"></div>
+      <button onclick="startFillExercise()">Nouvelle phrase</button>
+    </div>
+
+    <!-- MATCHING -->
+    <div id="matching" class="section">
+      <h2>Matching</h2>
+      <div id="matchingContent"></div>
+      <button onclick="startMatching()">Nouveau matching</button>
+    </div>
+
+    <!-- QUIZ AUDIO -->
+    <div id="audioquiz" class="section">
+      <h2>Quiz Audio</h2>
+      <div id="audioQuizContent"></div>
+      <button onclick="startAudioQuiz()">Nouveau quiz audio</button>
+    </div>
+
+    <!-- STATISTIQUES -->
+    <div id="stats" class="section">
+      <h2>📊 Mes Statistiques</h2>
+      <div id="statsContent"></div>
+    </div>
+
+    <footer>
+      Score : <span id="totalScore">0</span> • Streak : <span id="streak">0</span> 🔥
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
