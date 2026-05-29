@@ -13,12 +13,11 @@
 
 * { margin:0; padding:0; box-sizing:border-box; }
 body {
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family: system-ui, sans-serif;
   background: var(--bg);
   color: var(--text);
   min-height: 100vh;
   padding: 10px;
-  transition: background 0.3s;
 }
 .container {
   max-width: 820px;
@@ -39,8 +38,6 @@ header {
   position: absolute;
   top: 15px;
   right: 15px;
-  display: flex;
-  gap: 10px;
 }
 nav {
   display: flex;
@@ -58,7 +55,6 @@ nav button {
   background: var(--primary);
   color: white;
   cursor: pointer;
-  font-size: 0.95rem;
 }
 .section { display: none; padding: 20px; min-height: 480px; }
 .section.active { display: block; }
@@ -66,7 +62,7 @@ nav button {
 .card {
   width: 100%;
   max-width: 380px;
-  height: 280px;
+  height: 300px;
   margin: 30px auto;
   perspective: 1000px;
   cursor: pointer;
@@ -91,28 +87,30 @@ nav button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 20px;
+  text-align: center;
 }
 .front { background: linear-gradient(135deg, #3b82f6, #1e40af); color: white; }
 .back { background: linear-gradient(135deg, #10b981, #047857); color: white; transform: rotateY(180deg); }
 
-.verb-card, .option {
+.verb-card {
   background: #f8fafc;
   padding: 16px;
-  margin: 10px 0;
+  margin: 12px 0;
   border-radius: 16px;
   border-left: 6px solid var(--primary);
 }
-[data-theme="dark"] .verb-card, [data-theme="dark"] .option { background: #334155; }
+[data-theme="dark"] .verb-card { background: #334155; }
 
-button.option {
+.option {
   width: 100%;
   max-width: 380px;
   margin: 10px auto;
   padding: 16px;
   font-size: 1.1rem;
   border-radius: 16px;
+  background: #f1f5f9;
   cursor: pointer;
-  transition: all 0.2s;
 }
 footer {
   padding: 18px;
@@ -121,3 +119,4 @@ footer {
   font-weight: bold;
 }
 [data-theme="dark"] footer { background: #1e2937; }
+.mastery { font-size: 0.9rem; color: #64748b; margin-left: auto; }
